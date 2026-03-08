@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Fix My Campus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .admin-table th,
+        .admin-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .admin-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+        }
+
+        .action-select {
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="/" class="logo">
+                <img src="images/logo.png" style="height: 30px;" alt="Logo">
+                Fix My Campus
+                <span
+                    style="font-size: 0.8rem; background: var(--secondary); color: white; padding: 2px 6px; border-radius: 4px; margin-left: 5px;">ADMIN</span>
+            </a>
+            <div class="nav-links">
+                <a href="#" id="logoutBtn" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 2rem;">
+        <div class="dashboard-header">
+            <h2>Complaint Management</h2>
+            <a href="/public-stats.html" class="btn btn-primary" target="_blank">View Public Stats</a>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Image</th>
+                        <th>Assigned To</th>
+                        <th>Status</th>
+                        <th>Status Action</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody id="adminComplaintsList">
+                    <!-- Loaded via JS -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

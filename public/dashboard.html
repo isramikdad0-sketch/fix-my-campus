@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fix My Campus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="/" class="logo">
+                <img src="images/logo.png" style="height: 30px;" alt="Logo">
+                Fix My Campus
+            </a>
+            <div class="nav-links">
+                <span id="userName" style="font-weight: 500;">User</span>
+                <a href="#" id="logoutBtn" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h2>Your Dashboard</h2>
+            <a href="/report.html" class="btn btn-primary">Report an Issue</a>
+        </div>
+
+        <div class="filters">
+            <button class="btn btn-outline active" data-filter="all">All</button>
+            <button class="btn btn-outline" data-filter="Pending">Pending</button>
+            <button class="btn btn-outline" data-filter="In Progress">In Progress</button>
+            <button class="btn btn-outline" data-filter="Resolved">Resolved</button>
+        </div>
+
+        <div class="complaint-grid" id="complaintsGrid">
+            <!-- Complaints will be loaded here via JS -->
+            <p>Loading complaints...</p>
+        </div>
+
+        <div style="margin-top: 3rem; margin-bottom: 3rem;">
+            <h3>Complaint History</h3>
+            <div
+                style="overflow-x: auto; margin-top: 1rem; background: white; border-radius: 0.5rem; box-shadow: var(--shadow);">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: var(--bg-body); text-align: left; color: var(--text-light);">
+                            <th style="padding: 1rem;">Date</th>
+                            <th style="padding: 1rem;">Title</th>
+                            <th style="padding: 1rem;">Category</th>
+                            <th style="padding: 1rem;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <!-- Loaded via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
